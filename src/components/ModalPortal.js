@@ -25,6 +25,7 @@ export default class ModalPortal extends Component {
   };
 
   static propTypes = {
+    id: PropTypes.string,
     isOpen: PropTypes.bool.isRequired,
     defaultStyles: PropTypes.shape({
       content: PropTypes.object,
@@ -308,6 +309,7 @@ export default class ModalPortal extends Component {
         aria-modal="true"
       >
         <div
+          id={this.props.id || null}
           ref={this.setContentRef}
           style={{ ...contentStyles, ...this.props.style.content }}
           className={this.buildClassName("content", className)}

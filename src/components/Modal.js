@@ -24,6 +24,7 @@ export default class Modal extends Component {
 
   /* eslint-disable react/no-unused-prop-types */
   static propTypes = {
+    id: PropTypes.string,
     isOpen: PropTypes.bool.isRequired,
     style: PropTypes.shape({
       content: PropTypes.object,
